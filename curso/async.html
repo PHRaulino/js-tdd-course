@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Async/Await</title>
+</head>
+
+<body>
+</body>
+<script>
+
+  // Async e Await
+  async function getPosts(users) {
+    const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json()));
+
+    const people = await Promise.all(promises)
+
+    // console.log(people);
+
+  }
+
+  getPosts(['phraulino', 'willianjusten', 'sas']);
+
+  // PadStart e PadEnd
+  console.log('1'.padStart(10, 'ph'));
+  console.log('1'.padEnd(10, 'ph'));
+
+  // Exponenciação
+  console.log(2 ** 3);
+
+  // Array prototype includes
+  const arr = [1, 2, 3];
+  console.log(arr.includes(3));
+
+  const animals = {
+    camel: 3,
+    llama: 2,
+    alpaca: 5,
+  }
+
+  // Object Entries
+  const animalsMap = new Map(Object.entries(animals));
+
+  console.log(animalsMap.size);
+  console.log(animalsMap.has('llama'));
+  console.log(animalsMap.has('lion'));
+  console.log(animalsMap.get('alpaca'));
+
+  // Object Values
+  console.log('Total de animais -> ',Object.values(animals).reduce((a,b)=> a + b));
+
+  // trailing commas
+
+  const arr = [
+    1,
+    2,
+    3,
+    4,
+  ]
+
+  const obj = {
+    name: 'Willian',
+    age: 28,
+    country: 'brasil',
+  }
+
+  function sum(a,b,) {
+    return a + b;
+  }
+</script>
+
+</html>

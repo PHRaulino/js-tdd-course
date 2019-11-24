@@ -8,6 +8,11 @@
 * [Template para Readme](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * [Lista de Licenças Open Source](https://opensource.org/licenses)
 * [Analise dos Linters](https://willianjusten.com.br/analisando-seu-codigo-js-com-linter/)
+* [Editor Config](https://editorconfig.org/)
+* [Por que usar o NPM Scripts](https://css-tricks.com/why-npm-scripts/)
+* [Repositório Husky](https://github.com/typicode/husky)
+* [Git hooks](https://git-scm.com/book/it/v2/Customizing-Git-Git-Hooks)
+* [Modulos JS](https://www.freecodecamp.org/news/javascript-modules-a-beginner-s-guide-783f7d7a5fcc/#.b592lxm37)
 #### Exemplos de como escrever codigo
 > * [StileGuide Airbnb](https://github.com/airbnb/javascript)
 > * [Standard](https://github.com/standard/standard)
