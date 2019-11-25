@@ -1,40 +1,59 @@
-const { expect } = require('chai');
+/* eslint-disable no-unused-expressions */
+import { expect } from 'chai';
+import { sum, sub, mult, div } from '../src/main';
 
-describe('Main', () => {
-  let arr;
+describe('Calc', () => {
+  // Smoke testes
+  describe('Smoke testes', () => {
+    it('should exist the calc lib', () => {
+      expect(sum).to.exist;
+    });
 
-  before(() => {
-
+    it('should exist method `sum`', () => {
+      expect(sum).to.exist;
+      expect(sum).to.be.a('function');
+    });
+    it('should exist method `sub`', () => {
+      expect(sub).to.exist;
+      expect(sub).to.be.a('function');
+    });
+    it('should exist method `mult`', () => {
+      expect(mult).to.exist;
+      expect(mult).to.be.a('function');
+    });
+    it('should exist method `div`', () => {
+      expect(div).to.exist;
+      expect(div).to.be.a('function');
+    });
   });
 
-  after(() => {
-
+  describe('Sum', () => {
+    it('should return 4 when `sum(2, 2)`', () => {
+      expect(sum(2, 2)).to.be.equal(4);
+    });
   });
 
-  beforeEach(() => {
-    arr = [1, 2, 3];
+  describe('sub', () => {
+    it('should return 4 when `sub(6, 2)`', () => {
+      expect(sub(6, 2)).to.be.equal(4);
+    });
+    it('should return -4 when `sub(6, 10)`', () => {
+      expect(sub(6, 10)).to.be.equal(-4);
+    });
   });
 
-  afterEach(() => {
-
+  describe('Mult', () => {
+    it('should return 4 when `mult(2, 2)`', () => {
+      expect(mult(2, 2)).to.be.equal(4);
+    });
   });
 
-  it('should be an array', () => {
-    expect(arr).to.be.a('array');
-  });
-
-  it('should have a size of 4 when push another value to he array', () => {
-    arr.push(4);
-    expect(arr).to.have.lengthOf(4);
-  });
-
-  it('should remove 3 when use pop in the array', () => {
-    arr.pop();
-    expect(arr).to.not.include(3);
-  });
-
-  it('should have a size of 2 when pop a value from the array', () => {
-    arr.pop();
-    expect(arr).to.have.lengthOf(2);
+  describe('Div', () => {
+    it('should return 2 when `div(4, 2)`', () => {
+      expect(div(4, 2)).to.be.equal(2);
+    });
+    it('should return `Não é possivel divisão por zero!` when divide by 0', () => {
+      expect(div(4, 0)).to.equal('Não é possivel divisão por zero!');
+    });
   });
 });
