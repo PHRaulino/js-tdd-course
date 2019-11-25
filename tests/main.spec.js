@@ -31,4 +31,8 @@ describe('Main', () => {
   it('should return the number when no-multiple', () => {
     expect(FizzBuzz(7)).to.equal(7);
   });
+
+  it('should return 0 when 0', () => {
+    expect(FizzBuzz(0)).to.equal(0);
+  });
 });
