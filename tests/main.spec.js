@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-expressions */
 import { expect } from 'chai';
-import { sum, sub, mult, div } from '../src/main';
+import {
+  sum,
+  sub,
+  mult,
+  div,
+} from '../src/main';
 
 describe('Calc', () => {
   // Smoke testes
